@@ -25,8 +25,6 @@ const handleAudio = () => {
 };
 
 const handleEvents = () => {
-  var modal = document.getElementById("modal");
-  firstInteraction && (modal.style.display = "none");
   handleButton("none");
   setTimeout(handleAnimations, firstInteraction ? 4000 : 0);
   setTimeout(handleAudio, firstInteraction ? 14500 : 10500);
@@ -36,3 +34,5 @@ const handleButton = (displayValue) => {
   const button = document.getElementById("button");
   button.style.display = displayValue;
 };
+
+window.onload = handleEvents;

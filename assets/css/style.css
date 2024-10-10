@@ -1,0 +1,143 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: red;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+#modal {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: white;
+  font-size: xx-large;
+  font-weight: 900;
+  font-family: "roboto";
+  cursor: pointer;
+}
+.sub-container {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.logo {
+  width: 1100px;
+}
+.secondary-container {
+  top: 0;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.avatar-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% + 70px);
+  justify-content: end;
+  width: 51px;
+}
+
+.avatar {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+p {
+  animation: pulse 1s infinite;
+}
+
+button {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  background-color: white;
+  color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  z-index: 50;
+  width: 700px;
+  font-size: x-large;
+  font-weight: bold;
+  font-family: "roboto";
+}
+
+span {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 50px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+@keyframes toTop {
+  0% {
+    top: calc(100% - 48px);
+  }
+  100% {
+    top: -100;
+  }
+}
+
+@keyframes toBottom {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: calc(100% - 48px);
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .logo {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  button {
+    width: 100%;
+    font-size: large;
+  }
+}
+@media screen and (max-width: 480px) {
+  button {
+    font-size: medium;
+  }
+}
